@@ -1,0 +1,13 @@
+<view class="indexContainer">
+  <image wx:if="{{userInfo.avatarUrl}}" class="avatarUrl" src="{{userInfo.avatarUrl}}"></image>
+  <button wx:else="bindgetuserinfo" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">获取用户信息</button>
+  <text class="userName">{{userInfo.nickName}}</text>
+  <!-- 测试事件绑定 -->
+  <!-- <view class="goStudy" bindtap="handleParent">
+    <text bind:tap="handleChild">Hello World</text>
+  </view> -->
+
+  <view class="goStudy" bindtap="toLogs">
+    <text>Hello World</text>
+  </view>
+</view>
